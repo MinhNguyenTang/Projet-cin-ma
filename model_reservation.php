@@ -9,7 +9,7 @@ class ClientReservation {
   public function __construct(array $donnees){
     $this->hydrate($donnees);
   }
-  
+
   public function hydrate(array $donnees){
     foreach($donnees as $key => $value){
       $method = 'set'.ucfirst($key);
@@ -19,7 +19,6 @@ class ClientReservation {
       }
     }
   }
-
 
   public function getNbPlace() {return $this->nb_place;}
   public function getCodeReduction() {return $this->code_reduction;}
