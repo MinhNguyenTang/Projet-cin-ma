@@ -28,7 +28,7 @@ public function hydrate(array $donnees){
   public function getPrenom() {return $this->prenom;}
   public function getTelephone() {return $this->telephone;}
   public function getAdresseMail() {return $this->adresse_mail;}
-  public function getPass() {return $this->pass;}
+  public function getMdp() {return $this->mdp;}
 
 
  public function setId($id) {
@@ -74,7 +74,7 @@ public function hydrate(array $donnees){
   }
 
   public function setMdp($mdp) {
-    if (is_str($pass) && strlen($pass)<=255){
+    if (is_str($mdp) && strlen($mdp)<=255){
       trigger_error('Le mot de passe ne doit pas dépasser 255 caractères', E_USER_WARNING);
       return;
     }
