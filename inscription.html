@@ -2,6 +2,44 @@
 <html lang="fr">
 
 <head>
+  <title>Projet cinéma</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Place your description here" />
+  <meta name="keywords" content="put, your, keyword, here" />
+  <meta name="author" content="Templates.com - website templates provider" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+  <script src="js/cufon-yui.js" type="text/javascript"></script>
+  <script src="js/cufon-replace.js" type="text/javascript"></script>
+  <script src="js/Gill_Sans_400.font.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+
+  </head>
+  <body id="page1">
+  <div class="tail-top">
+  	<div class="tail-bottom">
+  		<div id="main">
+  <!-- HEADER -->
+  			<div id="header">
+  				<div class="row-1">
+  					<div class="fleft"><a href="index.html">France<span>Ciné</span></a></div>
+  					<ul>
+  						<li><a href="index.html"><img src="images/icon1-act.gif" alt="" /></a></li>
+  						<li><a href="contact.html"><img src="images/icon2.gif" alt="" /></a></li>
+  						<li><a href="API.html"><img src="images/icon3.gif" alt="" /></a></li>
+  					</ul>
+  				</div>
+  				<div class="row-2">
+  					<ul>
+  						<li><a href="index.html">Accueil</a></li>
+  						<li><a href="reservation.html">Réservation</a></li>
+  						<li><a href="contact.html">Contact</a></li>
+  						<li><a href="inscription.html" class="active">Connexion</a></li>
+  						<li class="last"><a href="API.html">?</a></li>
+  					</ul>
+  				</div>
+  			</div>
+  <!-- CONTENT -->
     <!-- Required meta tags-->
     <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
     <meta charset="UTF-8">
@@ -33,58 +71,53 @@
             <div class="card card-5">
                 <div class="card-heading">
                     <h2 class="title">Inscription</h2>
+                    <method="POST" action="insert-memb-ttt.php">
                 </div>
-                <div class="card-body">
-                    <form method="POST">
-                        <div class="form-row m-b-55">
-                            <div class="name">Nom</div>
-                            <div class="value">
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name">
-                                            <label class="label--desc">Nom</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name">
-                                            <label class="label--desc">Prénom</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">Email</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email">
-                                        <label class="label--desc">Adresse e-mail</label>
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="form-row m-b-55">
-                            <div class="name">Telephone</div>
-                            <div class="value">
-                                <div class="row row-refine">
-                                    <div class="col-9">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="phone">
-                                            <label class="label--desc">Numéro de téléphone</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">S'inscrire</button>
-                        </div>
-                    </form>
-                </div>
+                <center>
+                  <div class="container login-container">
+                       <div class="col-md-6">
+                        <h3>Inscription</h3><br/>
+                          <form method="POST" action="traitement_inscription.php">
+                          <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Nom" name="nom">
+                        </div><br/>
+                          <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Prénom" name="prenom">
+                        </div><br/>
+                          <div class="form-group">
+                          <input type="integer" class="form-control" placeholder="Numéro de téléphone" name="telephone">
+                        </div><br/>
+                          <div class="form-group">
+                          <input type="email" class="form-control" placeholder="Adresse e-mail" name="adresse_mail">
+                        </div><br/>
+                          <div class="form-group">
+                          <input type="password" class="form-control" placeholder="Mot de passe" name="pass"><br/>
+                        </div><br/>
+                          <input type="submit" class="btn btn-primary py-3 px-5" value="Valider">
+                       </div>
+                   </div>
+                </center><br/><br/><br/><br/>
             </div>
         </div>
-    </div>
+    </div><br/><br/>
+
+  <center>
+    <div class="container login-container">
+         <div class="col-md-6">
+           <h3>Connexion</h3>
+           <method="POST" action="select-memb-ttt.php">
+    <div class="form-group">
+    <input type="email" class="form-control" placeholder="Adresse e-mail" name="adresse_mail">
+  </div><br/>
+    <div class="form-group">
+    <input type="password" class="form-control" placeholder="Mot de passe" name="pass"><br/>
+  </div><br/>
+    <input type="submit" class="btn btn-primary py-3 px-5" value="Valider">
+  </div>
+</div>
+</center><br/><br/>
+
+
 
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -95,7 +128,19 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
-
+    <!-- FOOTER -->
+    			<div id="footer">
+    				<div class="left">
+    					<div class="right">
+    						<div class="inside">Copyright ©2020 Tout droits réservé <br />
+    					</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript"> Cufon.now(); </script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
