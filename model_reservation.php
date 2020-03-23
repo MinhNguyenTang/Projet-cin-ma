@@ -2,6 +2,7 @@
 
 class ClientReservation {
 
+  protected $email;
   protected $nb_place;
   protected $code_reduction;
   protected $paiement;
@@ -20,9 +21,19 @@ class ClientReservation {
     }
   }
 
+  public function getEmail() {return $this->$email;}
   public function getNbPlace() {return $this->nb_place;}
   public function getCodeReduction() {return $this->code_reduction;}
   public function getPaiement() {return $this->paiement;}
+
+  public function setEmail($email){
+    if(is_str($email) && strlen($email)<=255) {
+      // code...
+      trigger_error('L\'email doit comporter des caractères', E_USER_WARNING );
+      return;
+    }
+    $this->email = $email;)
+  }
 
   public function setNbPlace($nb_place){
     if($nb_place > 0 && $nb_place < 11){
