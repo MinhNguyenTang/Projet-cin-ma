@@ -4,7 +4,7 @@ if(empty($_POST['nom']) || empty($_POST['email']) || empty($_POST['message'])){
   $error = 'Veuillez remplir les champs';
 }
 if(empty($_POST['nom'])){
-  $error = 'Veuillez indiquer votre nom'
+  $error = 'Veuillez indiquer votre nom';
 }
 if(empty($_POST['email'])){
   $error = 'Veuillez indiquer votre adresse e-mail';
